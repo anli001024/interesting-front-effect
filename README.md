@@ -1,1 +1,2 @@
-# interesting-front-effect
+# 用于个人收藏一些有趣的前端效果
+
