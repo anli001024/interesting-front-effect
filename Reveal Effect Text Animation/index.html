@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reveal Effect Text Animation</title>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #000;
+        }
+
+        main {
+            padding: 10vw 0;
+        }
+
+        ul {
+            width: 100%;
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        li {
+            margin: 10vw 0;
+            text-align: left;
+        }
+
+        p {
+            display: block;
+            color: #fff;
+            font-family: 'Lato', sans-serif;
+            font-size: 2vw;
+            font-weight: 900;
+            line-height: 1.2;
+        }
+
+        p+p {
+            margin-top: 10px;
+        }
+
+        li:first-child {
+            margin-top: 0;
+        }
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+
+        li:nth-child(even) {
+            text-align: right;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        [data-reveal="content"] {
+            display: inline-block;
+            position: relative;
+        }
+
+        [data-reveal="cover"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            z-index: 1;
+        }
+
+        [data-reveal="text"] {
+            opacity: 0;
+        }
+
+        @keyframes reveal-cover {
+            0% {
+                width: 0;
+                left: 0;
+            }
+
+            44% {
+                width: 100%;
+                left: 0;
+            }
+
+            54% {
+                width: 100%;
+                left: 0;
+            }
+
+            100% {
+                width: 0;
+                left: 100%;
+            }
+        }
+
+        @keyframes reveal-text {
+            0% {
+                opacity: 0;
+            }
+
+            44% {
+                opacity: 0;
+            }
+
+            54% {
+                opacity: 1;
+            }
+        }
+
+        [data-js="reveal"].loaded [data-reveal="cover"] {
+            animation: reveal-cover 1.5s ease-in-out;
+        }
+
+        [data-js="reveal"].loaded [data-reveal="text"] {
+            opacity: 1;
+            animation: reveal-text 1.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <ul class="inner">
+            <li>
+                <p data-js="reveal">SANDWICHES&nbsp;&amp;&nbsp;PANCAKE</p>
+                <p data-js="reveal">GARDEN</p>
+                <p data-js="reveal">MORNING&nbsp;&amp;&nbsp;TOMORROW&nbsp;&amp;&nbsp;FRIEND</p>
+                <p data-js="reveal">
+                    ORANGE&nbsp;&amp;&nbsp;BIRD&nbsp;&amp;&nbsp;SHEEP&nbsp;&amp;&nbsp;CUP&nbsp;&amp;&nbsp;BUS</p>
+                <p data-js="reveal">APPLE&nbsp;&amp;&nbsp;FRUIT&nbsp;&amp;&nbsp;CAR</p>
+                <p data-js="reveal">CAKE&nbsp;&amp;&nbsp;PICTURE&nbsp;&amp;&nbsp;CAT&nbsp;&amp;&nbsp;STAMP</p>
+                <p data-js="reveal">
+                    PLANE&nbsp;&amp;&nbsp;BOOK&nbsp;&amp;&nbsp;RACKET&nbsp;&amp;&nbsp;GLASS&nbsp;&amp;&nbsp;BED</p>
+            </li>
+            <li>
+                <p data-js="reveal">APPLE<br>BANANA&nbsp;&amp;&nbsp;PINE APPLE&nbsp;&amp;&nbsp;SHEEP</p>
+                <p data-js="reveal">BANANA&nbsp;&amp;&nbsp;PINE APPLE</p>
+            </li>
+            <li>
+                <p data-js="reveal">PUMPKIN&nbsp;&amp;&nbsp;TARO&nbsp;&amp;&nbsp;CARROT</p>
+            </li>
+            <li>
+                <p data-js="reveal">HORSERADISH&nbsp;&amp;&nbsp;LETTUCE</p>
+                <p data-js="reveal">PUMPKIN&nbsp;&amp;&nbsp;TARO&nbsp;&amp;&nbsp;CARROT</p>
+                <p data-js="reveal">HORSERADISH&nbsp;&amp;&nbsp;LETTUCE</p>
+                <p data-js="reveal">POTATO&nbsp;&amp;&nbsp;BURDOCK</p>
+            </li>
+            <li>
+                <p data-js="reveal">
+                    EGG&nbsp;&amp;&nbsp;BAG&nbsp;&amp;&nbsp;ROSE&nbsp;&amp;&nbsp;CHAIR&nbsp;&amp;&nbsp;BAT</p>
+                <p data-js="reveal">
+                    FISH&nbsp;&amp;&nbsp;NOTEBOOK&nbsp;&amp;&nbsp;PENCIL&nbsp;&amp;&nbsp;DOG&nbsp;&amp;&nbsp;DESK</p>
+                <p data-js="reveal">WATCH&nbsp;&amp;&nbsp;MITT&nbsp;&amp;&nbsp;MILK&nbsp;&amp;&nbsp;FLOWER</p>
+                <p data-js="reveal">DOOR&nbsp;&amp;&nbsp;BOAT&nbsp;&amp;&nbsp;PIANO&nbsp;&amp;&nbsp;</p>
+            </li>
+            <li>
+                <p data-js="reveal">POTATO&nbsp;&amp;&nbsp;BURDOCK</p>
+                <p data-js="reveal">APPLE<br>BANANA&nbsp;&amp;&nbsp;PINE APPLE</p>
+                <p data-js="reveal">LETTER<br>CAP&nbsp;&amp;&nbsp;TAPE&nbsp;&amp;&nbsp;MAIL&nbsp;&amp;&nbsp;BOX</p>
+            </li>
+            <li>
+                <p data-js="reveal">APPLE<br>BANANA&nbsp;&amp;&nbsp;PINE APPLE</p>
+                <p data-js="reveal">TURNIP&nbsp;&amp;&nbsp;OKRA&nbsp;&amp;&nbsp;PEA</p>
+            </li>
+            <li>
+                <p data-js="reveal">SHIITAKE&nbsp;&amp;&nbsp;BEEFSTEAK PLANT</p>
+            </li>
+        </ul>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
