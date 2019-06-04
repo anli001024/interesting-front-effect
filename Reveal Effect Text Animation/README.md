@@ -1,8 +1,7 @@
 # 有趣的交互系列 - 文字遮罩入场效果
 在这个系列里分享一些简单，但是很有意思的交互效果~
 
-![效果图](https://an-l.oss-cn-beijing.aliyuncs.com/img/reveal_effect_text_animation.gif)
-
+![效果图](https://makapicture.oss-cn-beijing.aliyuncs.com/cdn/smc/release/aaa/reveal_effect_text_animation.gif)
 
 实现思路：
 1. 监听滚动，添加对应加载的class(比如`loaded`)
